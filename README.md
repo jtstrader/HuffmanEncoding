@@ -1,30 +1,23 @@
-ZIP & UNZIP = non-binary, standard compression & uncompression
-              minimum program requirements
-./ZIP sample1 = creates a sample1.zip compressed file & deletes sample1
-./UNZIP sample1.zip = uncompress sample1.zip to sample1
+Creates a Huffman Encoding Tree using input data to create a binary file to minimize data used in storage.
 
-c++ -c huffman.cpp
-c++ zip.cpp huffman.o
-c++ unzip.cpp
+# Example Test File for Input
 
-=========================
-=README2 - JACOB STRADER=
-=========================
-ZIP FILE FOR "MERCER TENNIS\n"
-10
-10 1010
-32 1011
-67 1100
-69 01
-73 1101
-77 1110
-78 001
-82 100
-83 1111
-84 000
-111001100110001100101100001001001110111111010
+    ZIP FILE FOR "MERCER TENNIS\n"
+    10
+    10 1010
+    32 1011
+    67 1100
+    69 01
+    73 1101
+    77 1110
+    78 001
+    82 100
+    83 1111
+    84 000
+    111001100110001100101100001001001110111111010
 
-ENCODING TABLE OF "MERCER TENNIS\n"
+# Encoding Table of "MERCER TENNIS\n"
+
            ####  ENCODING TABLE FOR FILE  ####
 
         Index   Char    Weight  Parent  ChildType
@@ -49,19 +42,19 @@ ENCODING TABLE OF "MERCER TENNIS\n"
         17      T8      8       18      1
         18      T9      14      0       -1
 
-Greedy Algorithm:
+# Greedy Algorithm
 The greedy algorithm looks for the two smallest nodes (either characters nodes or total nodes),
 and adds them together to form a new total node. The paths between said character nodes and total nodes
 are used to create the codes for the encoding. 
 
-Uncompression Process:
+# Uncompression Process
 I plan on uncompressing the file by taking in the input from the file and assigning each ASCII value to a key
 in the map (the code). Then I will go through the entire coded message at the bottom, adding a new index to the end
 of the check string when needed. When a match is finally found, that char in the map is printed to a file and the check
 string is reset for further use. Finally, I can close the inFile and outFile objects and my uncompression is done.
 
-Huffman Class:
 
+# Huffman Class
 ===public methods===
 
 insert(char ch, int weight): inserts a character into the tree. Sets weight char type, but does not set
