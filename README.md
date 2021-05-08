@@ -1,4 +1,5 @@
-Creates a Huffman Encoding Tree using input data to create a binary file to minimize data used in storage.
+# Huffman Encoding Tree
+Creates a Huffman Encoding Tree using input data to create a binary file to minimize data used in storage. Has zipping and unzipping functionality. The project's encoding is contained within huffman.cpp and it's specification file huffman.h, in which the methods are described at the bottom of this README.
 
 # Example Test File for Input
 
